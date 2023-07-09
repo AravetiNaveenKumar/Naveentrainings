@@ -1,0 +1,29 @@
+version: '3'
+services:
+  aws:
+    image: anaveenk3/trainingsaws:latest
+    ports:
+      - "8000:80"
+    deploy:
+      replicas: 3
+
+  devops:
+    image: anaveenk3/trainingsdevops:latest
+    ports:
+      - "8001:80"
+    deploy:
+      replicas: 3
+
+    azure:
+      image: anaveenk3/trainingsazure:latest
+      ports:
+        - "8002:80"
+      deploy:
+        replicas: 5
+
+     datascience:
+       image: anaveenk3/trainingsdatascience:latest
+       ports:
+         - "8003:80"
+       deploy:
+         replicas: 5
